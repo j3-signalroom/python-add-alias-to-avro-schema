@@ -142,12 +142,13 @@ def load_schema(file_name: str) -> dict:
     return schema
 
 
-def save_schema(file_name: str):
+def save_schema(file_name: str, updated_schema: dict) -> None:
     """
     This method reads in a file.
  
     Arg(s):
         file_name (str):   The name of the file.
+        updated_schema (dict): The updated schema.
     """
     with open(file_name, 'w', encoding='utf-8') as f:
         json.dump(updated_schema, f, ensure_ascii=False, indent=4)
@@ -156,4 +157,4 @@ def save_schema(file_name: str):
 if __name__ == "__main__":
     avsc_file = load_schema("<ORIGINAL_AVRO_SCHEMA>")
     updated_schema = add_aliases_to_avro_schema(avsc_file, "<PREENDED_VALUE>")
-    save_schema("<NEW_AVRO_SCHEMA>")
+    save_schema("<NEW_AVRO_SCHEMA>", updated_schema)
