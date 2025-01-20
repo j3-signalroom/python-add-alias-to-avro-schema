@@ -1,0 +1,10 @@
+[project]
+name = "python-add-alias-to-avro-schema"
+version = "0.01.00.000"
+description = "Python add aliases to Avro Schema."
+readme = "README.md"
+authors = [
+    { name = "Jeffrey Jonathan Jennings (J3)", email = "j3@thej3.com" }
+]
+requires-python = "~=3.11.9"
+dependencies = []
